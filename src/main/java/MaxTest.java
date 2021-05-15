@@ -1,13 +1,13 @@
 public class MaxTest {
-    public int findMaxNumber(Integer one, Integer two, Integer three) {
-        Integer maxNum = one;
-        if (two.compareTo(maxNum) > 0) {
-            maxNum = two;
+    public <E extends Comparable<E>> E findMax(E firstValue, E secondValue, E thirdValue) {
+        E maxValue = firstValue;
+        if (secondValue.compareTo(maxValue) > 0) {
+            maxValue = secondValue;
         }
-        if (three.compareTo(maxNum) > 0) {
-            maxNum = three;
+        if (thirdValue.compareTo(maxValue) > 0) {
+            maxValue = thirdValue;
         }
-        return maxNum;
+        return maxValue;
     }
 
     public float findFloatMaxNumber(Float one, Float two, Float three) {

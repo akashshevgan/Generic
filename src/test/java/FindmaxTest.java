@@ -5,17 +5,17 @@ class FindMaxTest {
     MaxTest findMax = new MaxTest();
     @Test
     void ifNumberOneIsMaxReturnTrue() {
-        Assertions.assertEquals(88, findMax.findMaxNumber(10,6,88));
+        Assertions.assertEquals(88, findMax.findMax(10,6,88));
     }
 
     @Test
     void ifNumberTwoIsMaxReturnTrue() {
-        Assertions.assertEquals(5, findMax.findMaxNumber(5, 3, 2));
+        Assertions.assertEquals(5, findMax.findMax(5, 3, 2));
     }
 
     @Test
     void ifNumberThreeIsMaxReturnTrue() {
-        Assertions.assertEquals(22, findMax.findMaxNumber(1, 5, 22));
+        Assertions.assertEquals(22, findMax.findMax(1, 5, 22));
     }
 
     @Test
