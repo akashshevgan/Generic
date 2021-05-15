@@ -1,5 +1,18 @@
-public class MaxTest {
-    public <E extends Comparable<E>> E findMax(E firstValue, E secondValue, E thirdValue) {
+class TestMaximum<E extends Comparable<E>> {
+    E firstValue, secondValue, thirdValue;
+    TestMaximum(E firstValue, E secondValue, E thirdValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
+    }
+
+    public TestMaximum() {
+    }
+
+    public E testMaximum() {
+        return testMaximum(firstValue, secondValue, thirdValue);
+    }
+    public static <E extends Comparable<E>> E testMaximum(E firstValue, E secondValue, E thirdValue) {
         E maxValue = firstValue;
         if (secondValue.compareTo(maxValue) > 0) {
             maxValue = secondValue;
@@ -8,27 +21,5 @@ public class MaxTest {
             maxValue = thirdValue;
         }
         return maxValue;
-    }
-
-    public float findFloatMaxNumber(Float one, Float two, Float three) {
-        Float maxNum = one;
-        if (two.compareTo(maxNum) > 0) {
-            maxNum = two;
-        }
-        if (three.compareTo(maxNum) > 0) {
-            maxNum = three;
-        }
-        return maxNum;
-    }
-
-    public String findStringMaxNumber(String stringOne, String stringTwo, String stringThree) {
-        String maxNum = stringOne;
-        if (stringTwo.compareTo(maxNum) > 0) {
-            maxNum = stringTwo;
-        }
-        if (stringThree.compareTo(maxNum) < 0) {
-            maxNum = stringThree;
-        }
-        return maxNum;
     }
 }
